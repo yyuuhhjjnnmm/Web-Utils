@@ -1,0 +1,9 @@
+Used for scrapping .pdf for Kobo.
+
+Regex for pdf https:
+cat [HTML_file] | grep -Eo 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)\.pdf' | sort -u
+
+Downloading pdfs using wget:
+wget -i [INPUT_FILE of pdf urls] -A.pdf 
+wget -r -A.pdf [URL for recursive traversal]
+
