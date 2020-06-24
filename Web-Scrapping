@@ -1,9 +1,22 @@
 Used for scrapping .pdf for Kobo.
 
-Regex for pdf https:
+Regex for pdf html tages:
 cat [HTML_file] | grep -Eo 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)\.pdf' | sort -u
 
 Downloading pdfs using wget:
 wget -i [INPUT_FILE of pdf urls] -A.pdf 
 wget -r -A.pdf [URL for recursive traversal]
 
+
+Webpage specific:
+
+https://investor.vanguard.com/investing/investment-research
+1. Save the html
+2. Use LINE 3 and pipe to file
+3. Use LINE 7
+
+www.mawer.com
+1. Use LINE 8
+2. Only take PDF from ./learn/investor-education, ./assets/Newsletters/
+
+www.pwlcapital.com
